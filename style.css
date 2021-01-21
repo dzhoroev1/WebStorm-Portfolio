@@ -1,74 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
-.main{
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&family=Roboto&display=swap');
+.container{
     height: 100vh;
     width: 100vw;
-    min-width: 600px;
+}
+.main{
     display: flex;
     flex-direction: column;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: salmon;
 }
-
+#header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
 header{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: yellow;
+    justify-content: space-around;
+    width: 30%;
 }
-.img{
-    height: 50vh;
-    width:  auto;
-    position: absolute;
-    top: 25vh;
-    left: 25vw;
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center
+}
+#about{
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 500px;
+    background: linear-gradient(salmon,orangered);
 }
-.background_image{
-    width: 100%;
-    height: auto;
-    visibility: hidden;
+
+.profile_pic{
+    margin-right: 5vw;
 }
-p,address{
-    color: darkgray;
-    font-family: 'Potta One', cursive;
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-b,h2,header{
-    color: black;
-    font-family: 'Potta One', cursive;
+.script{
+    align-items: center;
 }
-#about,#contacts,#portfolio{
+#portfolio{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: yellow;
+    background: linear-gradient(orangered,salmon);
+}
+.name_of_project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(salmon,lightblue);
+}
+.contact_me{
+    margin-bottom: 8vh;
+}
+#title{
+    padding-top: 1vh;
+    color: black;
+}
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: salmon;
+    opacity: 50%;
+    z-index: -1;
+}
+p,h1,h2{
+    /*    font-family: 'Roboto', sans-serif;
+        font-family: 'Indie Flower', cursive; */
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    color: wheat;
 }
 p{
-    text-align: center;
+    font-size: 2rem;
+}
+h3{
+    font-family: 'Righteous', cursive;
+    color: black;
+}
+h3:hover, #title:hover {
+    color: skyblue;
+}
+body{
+    margin: 0;
+}
+a{
+    color: transparent;
 }
 
+/* pop-up window*/
 .modal {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border: 1px solid black;
     border-radius: 10px;
-    z-index: 10000;
+    z-index: 10;
     background-color: white;
     width: 500px;
     max-width: 80%;
 }
 
 .modal.active {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-header {
@@ -97,6 +158,7 @@ p{
     padding: 10px 15px;
 }
 
+/* overplay which display when pop-up window occurs*/
 #overlay {
     position: fixed;
     opacity: 0;
@@ -112,4 +174,28 @@ p{
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+/*buttons to open project details window*/
+.open-window {
+    background-color: gray;
+    color: pink;
+}
+
+footer {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFB642;
+    background-color: lightblue;
+    /*background-image: linear-gradient(to bottom right, #15089D, #EA0063);*/
+}
+
+.social_container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 45vw;
+    margin-left: 45vw;
+    text-align: center;
 }

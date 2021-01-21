@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <title>Pop-up create</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
 <div class="main">
-<div class="img">
-    <img class="background_image" src="https://images.squarespace-cdn.com/content/v1/5976eefdd1758e6e5427c9b1/1502366684763-9E3FFMVFP6Y8FS9NXS7J/ke17ZwdGBToddI8pDm48kAZSD0ZqlApu7VTHbraM8yUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2djJrdE5hse_aelM5Qex7kCyWac_Z6TXW077GE3CBKffWCjLISwBs8eEdxAxTptZAUg/image-asset.png" alt="Main page image" >
-</div>
-<header>
-    <div class="links">
-        <nav>
-            <a href="#about">About me</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contacts">Contacts</a>
-        </nav>
+    <div id="header">
+        <header>
+            <nav>
+                <a href="#about"><h3>About me |</h3></a>
+                <a href="#portfolio"><h3>Favorite App | </h3></a>
+                <a href="#contacts"><h3>Contacts</h3></a>
+            </nav>
+        </header>
+        <a href="#about"><h1 id="title">Ninja Yo, Junior Food Guardian </h1></a>
+        <div class="background"></div>
     </div>
-    <h1>Ninja Yo, Junior Food Guardian </h1>
-</header>
-<section id="about">
-    <h2>About me</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlI71FewnALRrnzzdir-8tsH3_zOMjSkcWXIQETkRt5NlALAL_n0C5nOTMu1m3Vrjn9MxfaYkqJxfADKiZTvDe42d9APiTavP6kQ&usqp=CAU&ec=45761792" alt="My profile picture" height=250px>
-    <p>Hi. I'm Ninja Yo. I've been a junior ninja for 5 months now.<br>
-        For me, being ninja is not just a job, it's my duty to guard all foods.<br>I'm open to kick some as* to guard foods from being wasted.<br>
-        <b>Skills:</b> Kicking, Eating, Cooking.</p>
-</section>
-<section id="portfolio">
-    <h2>Portfolio</h2>
-    <img src="https://images.squarespace-cdn.com/content/v1/5976eefdd1758e6e5427c9b1/1502358701257-I02PPMPWYSG16B4W9S8A/ke17ZwdGBToddI8pDm48kAZSD0ZqlApu7VTHbraM8yUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2djJrdE5hse_aelM5Qex7kCyWac_Z6TXW077GE3CBKffWCjLISwBs8eEdxAxTptZAUg/home_banner_v03.png?format=1500w" alt="Image of past work (virtual piano)" height=200px>
-    <p><b>My killer squad</b> <button data-modal-target="#modal"> check more </button></p>
-
-</section>
-<section id="contacts">
-    <h2>Contacts</h2>
-    <footer>
-        <address>You can contact me at <b>Ninja@uchiha.food</b> or phone number <b>+1234567890</b>.</address>
+    <section id="about" class="container">
+        <div class="profile_pic"><img src="https://global-uploads.webflow.com/5fa23905123118739c5e21e2/5fa23905123118f7b05e2899_FN2_CharImg3.png" alt="profile pic" height="300px"></div>
+        <div class="aboutMe">
+            <div class="name"><h2>Ninja Yo</h2></div>
+            <div class="script"><p>Hi. I'm Ninja Yo. I've been a junior ninja for 5 months now.<br>
+                For me, being ninja is not just a job, it's my duty to guard all foods.<br>I'm open to kick some as* to guard foods from being wasted.<br>
+                <b>Skills:</b> Kicking, Eating, Cooking.</p></div>
+        </div>
+    </section>
+    <section id="portfolio" class="container">
+        <div class="name_of_project"><h2>My Favorite App</h2><button data-modal-target="#modal" class="open-window">Open Details</button></div>
+        <div class="modal window" id="modal">
+            <div class="modal-header">
+                <div class="title">Ninja Fruit App</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                Amazing game<br><br>
+                You can download from the App Store and from the Google Play.
+            </div>
+        </div>
+        <div class="portfolio_image"><img src="https://www.pngkey.com/png/full/307-3073999_fruit-ninja-fruit-ninja-logo.png" height="300px"></div>
+    </section>
+    <section id="contacts" class="container">
+        <div class="contact_me"><h2>Contact me</h2></div>
+        <div class="contact_me_info"><a href="https://www.halfbrick.com/contact"> <img src="https://i.pinimg.com/originals/1d/a2/da/1da2da15292b69e7adb7b4639c97930c.png" height="250px"></a></div>
+    </section>
+    <footer >
+        <div>
+            <div class="social_container">
+                <a href="https://github.com/dzhoroev1"><img src="https://pngimg.com/uploads/github/github_PNG20.png" alt="Github" width="50px" height="45px"></a>
+                <a href="https://www.linkedin.com/in/dzhoroev7/"><img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/01/linkedin-logo.png" alt="Linkedin" width="50px" height="50px"></a>
+            </div>
+            <a href="#about"><h3 id="sign">Ninja Yo, 2021</h3></a>
+        </div>
     </footer>
-</section>
-</div>
-
-<div class="modal" id="modal">
-    <div class="modal-header">
-        <div class="window-title"> My killer squad</div>
-        <button data-close-button class="close-button">&times;</button>
+    <div id="overlay">
     </div>
-    <div class="modal-body">
-        It's secret
-    </div>
-    <div id="overlay"></div>
 </div>
 </body>
 </html>
