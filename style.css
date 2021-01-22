@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&family=Roboto&display=swap');
 .container{
     height: 100vh;
@@ -23,17 +24,12 @@
     flex-direction: row-reverse;
     justify-content: space-around;
 }
-header{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
 nav{
+    margin-top: 2vh;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center
+}
+nav a{
+    margin: 0 30px 0 0;
 }
 #about{
     display: flex;
@@ -95,9 +91,6 @@ p,h1,h2{
     font-family: 'Righteous', cursive;
     text-align: center;
     color: wheat;
-}
-p{
-    font-size: 2rem;
 }
 h3{
     font-family: 'Righteous', cursive;
@@ -198,4 +191,43 @@ footer {
     margin-right: 45vw;
     margin-left: 45vw;
     text-align: center;
+}
+
+/*
+    media
+ */
+.hamburger{
+    text-align: right;
+    height: 10vh;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 10vh;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle{
+    display: none;
+}
+@media only screen and (max-width: 700px) {
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    nav{
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    nav a{
+        display: block;
+        border-bottom: 1px solid wheat;
+        margin: 0;
+    }
+    #toggle:checked + nav{
+        display: block;
+    }
+
 }
